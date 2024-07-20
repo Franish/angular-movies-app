@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -16,7 +14,7 @@ import { ModalComponent } from './components/modal/modal.component';
 import { ProfitPipe } from './pipes/profit.pipe';
 import { FormsModule } from '@angular/forms';
 import { DetailsActorsComponent } from './components/details-actors/details-actors.component';
-import { RouterModule } from '@angular/router';
+import { AppRoutesModule } from './modules/app.routes';
 
 
 @NgModule({
@@ -38,12 +36,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot([
-      {path:'',component:HomeComponent},
-      {path:'home',component:HomeComponent},
-      {path:'details',component:DetailsComponent}
-    ]),
+    AppRoutesModule,
     FormsModule
   ],
   providers: [],
